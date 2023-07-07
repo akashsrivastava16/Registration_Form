@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <script>
+    function RegForm()
+    {
+        var name=document.getElementById("btn1").value;
+        var rename=/^\w+[A-Z]$/;
+
+        if(rename.test(name)==false)
+        {
+            alert("Invalid name");
+        }
+        else{
+            alert("Valid name");
+        }
+
+        var mobile=document.getElementById("btn2").value;
+        var remobile=/^[+]91[-] \d+$/;
+        if (remobile.test(mobile)==false)
+        {
+            alert("Invalid mobile number");
+        }
+        else{
+            alert("Valid mobile number");
+        }
+
+        var email=document.getElementById("btn3").value;
+        var reemail=/^\w+([.-]?\w+)*@(\w+[.])+(\w{2,})$/;
+        if(reemail.test(email)==false)
+        {
+            alert("Invalid email");
+        }
+        else
+        {
+            alert("Valid email");
+        }
+
+        var pan=document.getElementById("btn5").value;
+        var repan=/^[A-Z0-9]+$/;
+
+        if(repan.test(pan)==false)
+        {
+            alert("Invalid PAN");
+        }
+        else
+        {
+            alert("Valid PAN");
+        }
+
+        var adhar=document.getElementById("btn6").value;
+        var readhar=/^\d{12,16}$/;
+        if(readhar.test(adhar)==false)
+        {
+            alert("Invalid Aadhaar number");
+        }
+        else
+        {
+            alert("Valid Aadhaar number");
+        }
+    }
+  </script>
+</head>
+<body>
+Name: <input type="text" id="btn1"><br>
+Mobile: <input type="text" id="btn2"><br>
+Email: <input type="text" id="btn3"><br>
+Address: <input type="text" id="btn4"><br>
+PAN: <input type="text" id="btn5"><br>
+Aadhaar: <input type="text" id="btn6"><br>
+<input type="submit" id="btn7" value="Register" onclick="RegForm()">
+</body>
+</html>
